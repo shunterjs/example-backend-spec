@@ -1,0 +1,36 @@
+{
+	"name": "shunter-example-backend-spec",
+	"version": "0.0.0",
+	"license": "LGPL-3.0",
+	"private": true,
+
+	"description": "A specification and test suite for the Shunter example application back ends",
+
+	"contributors": [
+		"Rowan Manning (http://rowanmanning.com/)"
+	],
+
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/shunterjs/example-backend-spec.git"
+	},
+	"homepage": "https://github.com/shunterjs/example-backend-spec",
+	"bugs": "https://github.com/shunterjs/example-backend-spec/issues",
+
+	"engines": {
+		"node": ">=0.10"
+	},
+	"dependencies": {
+		"mocha": "^2",
+		"proclaim": "^3",
+		"request": "^2"
+	},
+	"devDependencies": {
+		"jscs": "^2",
+		"jshint": "^2"
+	},
+
+	"scripts": {
+		"test": "./node_modules/.bin/mocha test.js"
+	}
+}
