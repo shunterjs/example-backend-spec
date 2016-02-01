@@ -119,7 +119,7 @@ Where `<slug>` is a random slug taken from the venue data (you can find venue da
 To run the test suite against your example back end, start your application and from within this repo run:
 
 ```
-BACKEND=http://localhost:1234 npm test
+BACKEND=http://localhost:5000 npm test
 ```
 
 Where the specified URL points to your running application.
