@@ -19,7 +19,7 @@ describe('Example Back End', function() {
 		});
 
 		it('Should respond with Shunter JSON', function() {
-			assert.isTrue((this.lastContentType === 'application/x-shunter+json; charset=utf-8' || 'application/x-shunter+json'));
+			assert.include(this.lastContentType, 'application/x-shunter+json');
 			assert.isNotNull(this.lastJson);
 			assert.isObject(this.lastJson);
 		});
@@ -47,7 +47,7 @@ describe('Example Back End', function() {
 		});
 
 		it('Should respond with Shunter JSON', function() {
-			assert.isTrue((this.lastContentType === 'application/x-shunter+json; charset=utf-8' || 'application/x-shunter+json'));
+			assert.include(this.lastContentType, 'application/x-shunter+json');
 			assert.isNotNull(this.lastJson);
 			assert.isObject(this.lastJson);
 		});
@@ -97,7 +97,7 @@ describe('Example Back End', function() {
 				'/the-craft-beer-co',
 				'/the-three-johns',
 				'/honest-burgers'
-			], this.lastResponse.headers.location);
+			], this.lastResponse.headers.location.substring(this.lastResponse.headers.location.lastIndexOf('/')));
 		});
 
 	});
