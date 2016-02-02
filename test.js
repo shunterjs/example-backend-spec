@@ -97,7 +97,7 @@ describe('Example Back End', function() {
 				'/the-craft-beer-co',
 				'/the-three-johns',
 				'/honest-burgers'
-			], this.lastResponse.headers.location);
+			], this.lastResponse.headers.location.substring(this.lastResponse.headers.location.lastIndexOf('/')));
 		});
 
 	});
